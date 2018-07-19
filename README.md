@@ -1,5 +1,6 @@
 # KVM BPF Tools
 Some codes to trace KVM events using BPF.
+Currently only x86 is supported.
 
 ## Requirements
 - [bcc](https://github.com/iovisor/bcc)
