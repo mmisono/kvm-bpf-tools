@@ -5,6 +5,9 @@ import sys
 
 from bcc import BPF
 
+if not hasattr(BPF, "perf_buffer_poll"):
+    BPF.perf_buffer_poll = BPF.kprobe_poll
+
 from exit_reason import EXIT_REASON
 
 text = """
