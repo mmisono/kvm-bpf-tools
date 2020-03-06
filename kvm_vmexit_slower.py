@@ -58,6 +58,9 @@ class Data(ct.Structure):
 def main(thresh=10, excludes=[]):
     global text
 
+    if (type(excludes) == int):
+      excludes = [excludes]
+
     if len(excludes) > 0:
         print("Excludes: {}".format(",".join([EXIT_REASON[i] for i in excludes])))
 
